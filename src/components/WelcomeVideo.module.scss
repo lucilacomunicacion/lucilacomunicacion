@@ -1,0 +1,64 @@
+.frame {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 18rem;
+  max-height: 32rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--lc-green-deep);
+  box-shadow:
+    0 0 0 1px rgba(217, 183, 121, 0.55),
+    0 0 0 8px rgba(242, 245, 240, 0.06),
+    0 24px 48px rgba(10, 25, 18, 0.35);
+}
+
+.ornament {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  z-index: 1;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--lc-gold);
+  box-shadow: 0 0 0 4px rgba(217, 183, 121, 0.25);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(127, 166, 138, 0.45), transparent 60%),
+    var(--lc-green-deep);
+}
+
+.fallbackMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 999px;
+  border: 1px solid var(--lc-gold);
+  color: var(--lc-gold);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ornament {
+    box-shadow: none;
+  }
+}

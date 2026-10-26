@@ -73,11 +73,11 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
-  theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | mint | rose | dusk | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  solid: "contrast", // color | contrast
+  theme: "light", // dark | light | system
+  neutral: "custom", // sand | gray | slate | mint | rose | dusk | custom
+  brand: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "custom", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  solid: "color", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative | sharp
   surface: "translucent", // filled | translucent
@@ -119,7 +119,7 @@ const effects: EffectsConfig = {
   },
   dots: {
     display: true,
-    opacity: 40,
+    opacity: 30,
     size: "2",
     color: "brand-background-strong",
   },

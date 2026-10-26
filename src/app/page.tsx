@@ -13,6 +13,7 @@ import {
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Newsletter } from "@/components";
+import { WelcomeVideo } from "@/components/WelcomeVideo";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
@@ -42,15 +43,24 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
+      <Row
+        as="section"
+        aria-label="Portada"
+        className="lc-section-green"
+        fillWidth
+        radius="xl"
+        padding="xl"
+        gap="40"
+        vertical="center"
+        s={{ direction: "column", padding: "24", gap: "32" }}
+      >
+        <Column flex={1} horizontal="start" align="left" s={{ horizontal: "center", align: "center" }}>
           {home.featured.display && (
             <RevealFx
               fillWidth
-              horizontal="center"
-              paddingTop="16"
+              horizontal="start"
               paddingBottom="32"
-              paddingLeft="12"
+              s={{ horizontal: "center" }}
             >
               <Badge
                 background="brand-alpha-weak"
@@ -65,17 +75,17 @@ export default function Home() {
               </Badge>
             </RevealFx>
           )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l">
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16" s={{ horizontal: "center" }}>
+            <Heading wrap="balance" variant="display-strong-m">
               {home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={200} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+          <RevealFx translateY="8" delay={200} fillWidth horizontal="start" paddingBottom="32" s={{ horizontal: "center" }}>
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-l">
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={400} horizontal="center" paddingLeft="12">
+          <RevealFx paddingTop="12" delay={400} horizontal="start" s={{ horizontal: "center" }}>
             <Button
               id="about"
               data-border="rounded"
@@ -100,7 +110,18 @@ export default function Home() {
             </Button>
           </RevealFx>
         </Column>
-      </Column>
+        <RevealFx
+          delay={300}
+          horizontal="center"
+          style={{ flex: "0 0 auto", width: "min(18rem, 100%)" }}
+        >
+          <WelcomeVideo
+            src="/videos/video-saludo.mp4"
+            label={`Video de saludo de ${person.name}`}
+            fallbackInitial={person.firstName.charAt(0)}
+          />
+        </RevealFx>
+      </Row>
       <RevealFx translateY="16" delay={600}>
         <Projects range={[1, 1]} />
       </RevealFx>

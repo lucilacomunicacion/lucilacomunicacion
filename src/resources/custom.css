@@ -1,69 +1,85 @@
-/* :root {
-  /*
-  /* Override default variables here */
 /*
-  --font-size-display-multiplier:   1;
-  --font-size-heading-multiplier:   1;
-  --font-size-body-multiplier:      1;
-  --font-size-label-multiplier:     1;
+  Identidad visual lucila.comunicacion
+  - Verde principal  #2d5945  (brand-500)
+  - Blanco verdoso   #f2f5f0  (neutral-1200 / page background)
+  - Verde salvia     #7fa68a  (brand-700, complementario)
+  - Dorado suave     #d9b779  (accent-700, solo detalles e íconos)
+*/
+:root {
+  --lc-green: #2d5945;
+  --lc-green-deep: #224536;
+  --lc-cream: #f2f5f0;
+  --lc-sage: #7fa68a;
+  --lc-gold: #d9b779;
 
-  --line-height-display-multiplier: 1;
-  --line-height-heading-multiplier: 1;
-  --line-height-body-multiplier:    1;
-  --line-height-label-multiplier:   1;
+  --scheme-brand-100: #102219;
+  --scheme-brand-200: #183327;
+  --scheme-brand-300: #1f4232;
+  --scheme-brand-400: #24493a;
+  --scheme-brand-500: #2d5945;
+  --scheme-brand-600: #4f7d64;
+  --scheme-brand-700: #7fa68a;
+  --scheme-brand-800: #a7c3ae;
+  --scheme-brand-900: #c6d8ca;
+  --scheme-brand-1000: #dde8df;
+  --scheme-brand-1100: #e9f0ea;
+  --scheme-brand-1200: #f2f5f0;
+  --scheme-brand-600-15: rgba(79, 125, 100, 0.15);
+  --scheme-brand-600-30: rgba(79, 125, 100, 0.3);
+  --scheme-brand-600-50: rgba(79, 125, 100, 0.5);
 
-  --default-border:        var(--neutral-border-medium);
+  --scheme-accent-100: #2a200c;
+  --scheme-accent-200: #3d2f14;
+  --scheme-accent-300: #5e4a22;
+  --scheme-accent-400: #7a612e;
+  --scheme-accent-500: #a6854a;
+  --scheme-accent-600: #c4a061;
+  --scheme-accent-700: #d9b779;
+  --scheme-accent-800: #e5cb98;
+  --scheme-accent-900: #eedcb6;
+  --scheme-accent-1000: #f5ead2;
+  --scheme-accent-1100: #f9f2e4;
+  --scheme-accent-1200: #fcf8f0;
+  --scheme-accent-600-15: rgba(217, 183, 121, 0.15);
+  --scheme-accent-600-30: rgba(217, 183, 121, 0.3);
+  --scheme-accent-600-50: rgba(217, 183, 121, 0.5);
 
-  /*
-  /* Example setup for custom colors */
-/* Generate at: https://once-ui.com/customize */
-/*
-  --scheme-brand-100: #08002f;
-  --scheme-brand-200:  #04025c;
-  --scheme-brand-300:  #1f398e;
-  --scheme-brand-400:  #3856ae;
-  --scheme-brand-500:  #5071cc;
-  --scheme-brand-600:  #6f94f1;
-  --scheme-brand-700:  #8db3ff;
-  --scheme-brand-800:  #b2dbff;
-  --scheme-brand-900:  #bfe8ff;
-  --scheme-brand-1000: #ccf6ff;
-  --scheme-brand-1100: #d2fcff;
-  --scheme-brand-1200: #d2fcff;
-  --scheme-brand-600-10: rgba(111,148,241,0.1);
-  --scheme-brand-600-30: rgba(111,148,241,0.3);
-  --scheme-brand-600-50: rgba(111,148,241,0.5);
+  --scheme-neutral-100: #14261e;
+  --scheme-neutral-200: #1c3329;
+  --scheme-neutral-300: #2d4a3d;
+  --scheme-neutral-400: #44604f;
+  --scheme-neutral-500: #5c7565;
+  --scheme-neutral-600: #7a8f80;
+  --scheme-neutral-700: #9aab9e;
+  --scheme-neutral-800: #bccabf;
+  --scheme-neutral-900: #d3ddd4;
+  --scheme-neutral-1000: #e3eae2;
+  --scheme-neutral-1100: #ebf0e8;
+  --scheme-neutral-1200: #f2f5f0;
+  --scheme-neutral-600-15: rgba(45, 89, 69, 0.12);
+  --scheme-neutral-600-30: rgba(45, 89, 69, 0.24);
+  --scheme-neutral-600-50: rgba(45, 89, 69, 0.4);
+}
 
-  --scheme-accent-100:  #030b10;
-  --scheme-accent-200:  #0d181d;
-  --scheme-accent-300:  #364248;
-  --scheme-accent-400:  #505d64;
-  --scheme-accent-500:  #69777e;
-  --scheme-accent-600:  #8a989f;
-  --scheme-accent-700:  #a8b7bf;
-  --scheme-accent-800:  #c8d7df;
-  --scheme-accent-900:  #d5e4ec;
-  --scheme-accent-1000: #e2f1f9;
-  --scheme-accent-1100: #e9f8ff;
-  --scheme-accent-1200: #efffff;
-  --scheme-accent-600-10: rgba(138,152,159,0.1);
-  --scheme-accent-600-30: rgba(138,152,159,0.3);
-  --scheme-accent-600-50: rgba(138,152,159,0.5);
-
-  --scheme-neutral-100:  #020b10;
-  --scheme-neutral-200:  #0b181d;
-  --scheme-neutral-300:  #344248;
-  --scheme-neutral-400:  #4f5d64;
-  --scheme-neutral-500:  #68777e;
-  --scheme-neutral-600:  #89989f;
-  --scheme-neutral-700:  #a7b7be;
-  --scheme-neutral-800:  #c7d7df;
-  --scheme-neutral-900:  #d4e4ec;
-  --scheme-neutral-1000: #e1f2f9;
-  --scheme-neutral-1100: #e7f8ff;
-  --scheme-neutral-1200: #eeffff;
-  --scheme-neutral-600-10: rgba(137,152,159,0.1);
-  --scheme-neutral-600-30: rgba(137,152,159,0.3);
-  --scheme-neutral-600-50: rgba(137,152,159,0.5);
-  /*
-}*/
+/* Bloque de contraste sobre verde principal (alterna con el fondo blanco verdoso) */
+.lc-section-green {
+  background: var(--lc-green);
+  --page-background: var(--lc-green);
+  --neutral-on-background-strong: var(--lc-cream);
+  --neutral-on-background-medium: #e3eae2;
+  --neutral-on-background-weak: #d3ddd4;
+  --brand-on-background-strong: var(--lc-cream);
+  --brand-on-background-medium: #dde8df;
+  --brand-on-background-weak: #c6d8ca;
+  --neutral-alpha-weak: rgba(242, 245, 240, 0.14);
+  --neutral-alpha-medium: rgba(242, 245, 240, 0.24);
+  --neutral-alpha-strong: rgba(242, 245, 240, 0.4);
+  --neutral-border-medium: rgba(242, 245, 240, 0.28);
+  --neutral-border-strong: rgba(242, 245, 240, 0.45);
+  --neutral-background-weak: rgba(242, 245, 240, 0.06);
+  --neutral-background-medium: rgba(242, 245, 240, 0.1);
+  --neutral-background-strong: rgba(242, 245, 240, 0.16);
+  --brand-alpha-weak: rgba(217, 183, 121, 0.16);
+  --brand-alpha-medium: rgba(217, 183, 121, 0.28);
+  color: var(--lc-cream);
+}
